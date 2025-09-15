@@ -11,4 +11,4 @@ COPY ./config.json /config/
 ENV PORT 8000
 ENV HOST 0.0.0.0
 # HEALTHCHECK --interval=1m --timeout=10s --start-period=60s CMD curl -f http://localhost:${PORT} || exit 1
-CMD uvx mcpo --host ${HOST} --port ${PORT} --config /config/config.json
+CMD uvx mcpo --host ${HOST} --port ${PORT} --config /config/config.json --hot-reload
