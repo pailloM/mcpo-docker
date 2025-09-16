@@ -12,5 +12,5 @@ COPY healthcheck.sh /healthcheck.sh
 RUN chmod +x /healthcheck.sh
 ENV PORT 8000
 ENV HOST 0.0.0.0
-HEALTHCHECK --interval=1m --timeout=10s --start-period=60s CMD ./healthcheck.sh
+HEALTHCHECK --interval=1m --timeout=10s --start-period=60s CMD sh /healthcheck.sh
 CMD uvx mcpo --host ${HOST} --port ${PORT} --config /config/config.json --hot-reload
