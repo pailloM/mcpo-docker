@@ -9,6 +9,7 @@ RUN npm i npx
 RUN pip install mcpo uv
 COPY ./config.json /config/
 COPY healthcheck.sh /healthcheck.sh
+RUN chmod +x /healthcheck.sh
 ENV PORT 8000
 ENV HOST 0.0.0.0
 HEALTHCHECK --interval=1m --timeout=10s --start-period=60s CMD ./healthcheck.sh
