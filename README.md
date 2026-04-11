@@ -1,5 +1,5 @@
 MCP server configured via json config file
-
+  
 Defult config provides memory, time and osm. Config.json can be monted to a local volume and modified as required.
 
 Exemple docker compose:
